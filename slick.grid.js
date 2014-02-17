@@ -66,6 +66,7 @@ if (typeof Slick === "undefined") {
       enableColumnReorder: true,
       asyncEditorLoading: false,
       asyncEditorLoadDelay: 100,
+      autoExpandColumns: false,
       forceFitColumns: false,
       enableAsyncPostRender: false,
       asyncPostRenderDelay: 50,
@@ -1611,7 +1612,7 @@ if (typeof Slick === "undefined") {
         $viewport.height(viewportH);
       }
 
-      if (options.forceFitColumns) {
+      if (options.forceFitColumns || options.autoExpandColumns) {
         autosizeColumns();
       }
 
