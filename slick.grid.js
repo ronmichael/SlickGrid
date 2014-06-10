@@ -2606,7 +2606,7 @@ if (typeof Slick === "undefined") {
       $(activeCellNode).addClass("editable");
 
       // don't clear the cell if a custom editor is passed through
-      if (!editor) {
+      if (!editor || columnDef.keepPlaceholderHTML) {
         activeCellNode.innerHTML = "";
       }
 
