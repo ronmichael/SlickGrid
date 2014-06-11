@@ -2606,8 +2606,8 @@ if (typeof Slick === "undefined") {
       $(activeCellNode).addClass("editable");
 
       // don't clear the cell if a custom editor is passed through
-      if (!editor || columnDef.keepPlaceholderHTML) {
-        activeCellNode.innerHTML = "";
+      if (!editor && columnDef.keepPlaceholderHTML!==true) { // RMZ
+            activeCellNode.innerHTML = "";
       }
 
       currentEditor = new (editor || getEditor(activeRow, activeCell))({
